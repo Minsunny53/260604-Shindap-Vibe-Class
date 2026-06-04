@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    overflow: hidden; /* 스크롤바 숨김 */
+    background-color: #000; /* 우주 배경색 */
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+canvas {
+    display: block; /* 캔버스 여백 제거 */
+}
+
+#ui-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* 클릭 이벤트가 캔버스로 전달되도록 함 */
+    z-index: 10;
+}
+
+#instructions {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    pointer-events: auto; /* 이 영역은 클릭 가능하도록 설정 */
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
+
+#instructions h1 {
+    margin-top: 0;
+    color: #4da6ff;
+    text-shadow: 0 0 10px rgba(77, 166, 255, 0.5);
+}
+
+#instructions p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+#instructions b {
+    color: #ffcc00;
+}
+
+#cockpit-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 40%;
+    object-fit: cover;
+    object-position: bottom;
+    pointer-events: none; /* 클릭 이벤트가 캔버스로 전달되도록 함 */
+    mix-blend-mode: screen; /* 검은 배경을 투명하게 만들어 화면과 겹치게 함 */
+    z-index: 5; /* instructions보다 낮게, 캔버스보다 높게 */
+    opacity: 0.9;
+}

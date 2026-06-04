@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D 태양계 시뮬레이션</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js 라이브러리 및 PointerLockControls 로드 -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="ui-container">
+        <div id="instructions">
+            <h1>태양계 탐험</h1>
+            <p>클릭하여 우주선에 탑승하세요.</p>
+            <p>조작: <b>마우스</b> (시선 이동), <b>W A S D</b> 또는 <b>방향키</b> (이동)</p>
+            <p>상하 이동: <b>Space</b> (상승), <b>Shift</b> (하강)</p>
+            <p>속도 증가: <b>마우스 왼쪽 버튼</b> 누르고 있기</p>
+        </div>
+    </div>
+    
+    <!-- 우주선 조종석 오버레이 -->
+    <img id="cockpit-overlay" src="dashboard.png" alt="spaceship cockpit">
+    
+    <script type="module" src="script.js"></script>
+</body>
+</html>
